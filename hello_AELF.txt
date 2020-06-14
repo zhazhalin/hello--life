@@ -1,0 +1,726 @@
+ELF 头：
+  Magic：  7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00 
+  类别:                              ELF64
+  数据:                              2 补码，小端序 (little endian)
+  版本:                              1 (current)
+  OS/ABI:                            UNIX - System V
+  ABI 版本:                          0
+  类型:                              EXEC (可执行文件)
+  系统架构:                          Advanced Micro Devices X86-64
+  版本:                              0x1
+  入口点地址：              0x4004b0
+  程序头起点：              64 (bytes into file)
+  Start of section headers:          14728 (bytes into file)
+  标志：             0x0
+  本头的大小：       64 (字节)
+  程序头大小：       56 (字节)
+  Number of program headers:         9
+  节头大小：         64 (字节)
+  节头数量：         30
+  字符串表索引节头： 29
+
+节头：
+  [号] 名称              类型             地址              偏移量
+       大小              全体大小          旗标   链接   信息   对齐
+  [ 0]                   NULL             0000000000000000  00000000
+       0000000000000000  0000000000000000           0     0     0
+  [ 1] .interp           PROGBITS         0000000000400238  00000238
+       000000000000001c  0000000000000000   A       0     0     1
+  [ 2] .note.ABI-tag     NOTE             0000000000400254  00000254
+       0000000000000020  0000000000000000   A       0     0     4
+  [ 3] .note.gnu.build-i NOTE             0000000000400274  00000274
+       0000000000000024  0000000000000000   A       0     0     4
+  [ 4] .gnu.hash         GNU_HASH         0000000000400298  00000298
+       000000000000001c  0000000000000000   A       5     0     8
+  [ 5] .dynsym           DYNSYM           00000000004002b8  000002b8
+       0000000000000090  0000000000000018   A       6     1     8
+  [ 6] .dynstr           STRTAB           0000000000400348  00000348
+       0000000000000075  0000000000000000   A       0     0     1
+  [ 7] .gnu.version      VERSYM           00000000004003be  000003be
+       000000000000000c  0000000000000002   A       5     0     2
+  [ 8] .gnu.version_r    VERNEED          00000000004003d0  000003d0
+       0000000000000020  0000000000000000   A       6     1     8
+  [ 9] .rela.dyn         RELA             00000000004003f0  000003f0
+       0000000000000060  0000000000000018   A       5     0     8
+  [10] .rela.plt         RELA             0000000000400450  00000450
+       0000000000000018  0000000000000018  AI       5    22     8
+  [11] .init             PROGBITS         0000000000400468  00000468
+       000000000000001b  0000000000000000  AX       0     0     4
+  [12] .plt              PROGBITS         0000000000400490  00000490
+       0000000000000020  0000000000000010  AX       0     0     16
+  [13] .text             PROGBITS         00000000004004b0  000004b0
+       00000000000001a5  0000000000000000  AX       0     0     16
+  [14] .fini             PROGBITS         0000000000400658  00000658
+       000000000000000d  0000000000000000  AX       0     0     4
+  [15] .rodata           PROGBITS         0000000000400668  00000668
+       0000000000000018  0000000000000000   A       0     0     8
+  [16] .eh_frame_hdr     PROGBITS         0000000000400680  00000680
+       0000000000000044  0000000000000000   A       0     0     4
+  [17] .eh_frame         PROGBITS         00000000004006c8  000006c8
+       0000000000000108  0000000000000000   A       0     0     8
+  [18] .init_array       INIT_ARRAY       0000000000600e00  00000e00
+       0000000000000008  0000000000000008  WA       0     0     8
+  [19] .fini_array       FINI_ARRAY       0000000000600e08  00000e08
+       0000000000000008  0000000000000008  WA       0     0     8
+  [20] .dynamic          DYNAMIC          0000000000600e10  00000e10
+       00000000000001d0  0000000000000010  WA       6     0     8
+  [21] .got              PROGBITS         0000000000600fe0  00000fe0
+       0000000000000020  0000000000000008  WA       0     0     8
+  [22] .got.plt          PROGBITS         0000000000601000  00001000
+       0000000000000020  0000000000000008  WA       0     0     8
+  [23] .data             PROGBITS         0000000000601020  00001020
+       0000000000000004  0000000000000000  WA       0     0     1
+  [24] .bss              NOBITS           0000000000601024  00001024
+       0000000000000004  0000000000000000  WA       0     0     1
+  [25] .comment          PROGBITS         0000000000000000  00001024
+       000000000000002c  0000000000000001  MS       0     0     1
+  [26] .gnu.build.attrib NOTE             0000000000a01028  00001050
+       0000000000001830  0000000000000000           0     0     4
+  [27] .symtab           SYMTAB           0000000000000000  00002880
+       00000000000009a8  0000000000000018          28    82     8
+  [28] .strtab           STRTAB           0000000000000000  00003228
+       0000000000000643  0000000000000000           0     0     1
+  [29] .shstrtab         STRTAB           0000000000000000  0000386b
+       0000000000000119  0000000000000000           0     0     1
+Key to Flags:
+  W (write), A (alloc), X (execute), M (merge), S (strings), I (info),
+  L (link order), O (extra OS processing required), G (group), T (TLS),
+  C (compressed), x (unknown), o (OS specific), E (exclude),
+  l (large), p (processor specific)
+
+There are no section groups in this file.
+
+程序头：
+  Type           Offset             VirtAddr           PhysAddr
+                 FileSiz            MemSiz              Flags  Align
+  PHDR           0x0000000000000040 0x0000000000400040 0x0000000000400040
+                 0x00000000000001f8 0x00000000000001f8  R      0x8
+  INTERP         0x0000000000000238 0x0000000000400238 0x0000000000400238
+                 0x000000000000001c 0x000000000000001c  R      0x1
+      [Requesting program interpreter: /lib64/ld-linux-x86-64.so.2]
+  LOAD           0x0000000000000000 0x0000000000400000 0x0000000000400000
+                 0x00000000000007d0 0x00000000000007d0  R E    0x200000
+  LOAD           0x0000000000000e00 0x0000000000600e00 0x0000000000600e00
+                 0x0000000000000224 0x0000000000000228  RW     0x200000
+  DYNAMIC        0x0000000000000e10 0x0000000000600e10 0x0000000000600e10
+                 0x00000000000001d0 0x00000000000001d0  RW     0x8
+  NOTE           0x0000000000000254 0x0000000000400254 0x0000000000400254
+                 0x0000000000000044 0x0000000000000044  R      0x4
+  GNU_EH_FRAME   0x0000000000000680 0x0000000000400680 0x0000000000400680
+                 0x0000000000000044 0x0000000000000044  R      0x4
+  GNU_STACK      0x0000000000000000 0x0000000000000000 0x0000000000000000
+                 0x0000000000000000 0x0000000000000000  RW     0x10
+  GNU_RELRO      0x0000000000000e00 0x0000000000600e00 0x0000000000600e00
+                 0x0000000000000200 0x0000000000000200  R      0x1
+
+ Section to Segment mapping:
+  段节...
+   00     
+   01     .interp 
+   02     .interp .note.ABI-tag .note.gnu.build-id .gnu.hash .dynsym .dynstr .gnu.version .gnu.version_r .rela.dyn .rela.plt .init .plt .text .fini .rodata .eh_frame_hdr .eh_frame 
+   03     .init_array .fini_array .dynamic .got .got.plt .data .bss 
+   04     .dynamic 
+   05     .note.ABI-tag .note.gnu.build-id 
+   06     .eh_frame_hdr 
+   07     
+   08     .init_array .fini_array .dynamic .got 
+
+Dynamic section at offset 0xe10 contains 24 entries:
+  标记        类型                         名称/值
+ 0x0000000000000001 (NEEDED)             共享库：[libc.so.6]
+ 0x000000000000000c (INIT)               0x400468
+ 0x000000000000000d (FINI)               0x400658
+ 0x0000000000000019 (INIT_ARRAY)         0x600e00
+ 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)
+ 0x000000000000001a (FINI_ARRAY)         0x600e08
+ 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)
+ 0x000000006ffffef5 (GNU_HASH)           0x400298
+ 0x0000000000000005 (STRTAB)             0x400348
+ 0x0000000000000006 (SYMTAB)             0x4002b8
+ 0x000000000000000a (STRSZ)              117 (bytes)
+ 0x000000000000000b (SYMENT)             24 (bytes)
+ 0x0000000000000015 (DEBUG)              0x0
+ 0x0000000000000003 (PLTGOT)             0x601000
+ 0x0000000000000002 (PLTRELSZ)           24 (bytes)
+ 0x0000000000000014 (PLTREL)             RELA
+ 0x0000000000000017 (JMPREL)             0x400450
+ 0x0000000000000007 (RELA)               0x4003f0
+ 0x0000000000000008 (RELASZ)             96 (bytes)
+ 0x0000000000000009 (RELAENT)            24 (bytes)
+ 0x000000006ffffffe (VERNEED)            0x4003d0
+ 0x000000006fffffff (VERNEEDNUM)         1
+ 0x000000006ffffff0 (VERSYM)             0x4003be
+ 0x0000000000000000 (NULL)               0x0
+
+重定位节 '.rela.dyn' at offset 0x3f0 contains 4 entries:
+  偏移量          信息           类型           符号值        符号名称 + 加数
+000000600fe0  000100000006 R_X86_64_GLOB_DAT 0000000000000000 _ITM_deregisterTMClone + 0
+000000600fe8  000300000006 R_X86_64_GLOB_DAT 0000000000000000 __libc_start_main@GLIBC_2.2.5 + 0
+000000600ff0  000400000006 R_X86_64_GLOB_DAT 0000000000000000 __gmon_start__ + 0
+000000600ff8  000500000006 R_X86_64_GLOB_DAT 0000000000000000 _ITM_registerTMCloneTa + 0
+
+重定位节 '.rela.plt' at offset 0x450 contains 1 entry:
+  偏移量          信息           类型           符号值        符号名称 + 加数
+000000601018  000200000007 R_X86_64_JUMP_SLO 0000000000000000 printf@GLIBC_2.2.5 + 0
+
+The decoding of unwind sections for machine type Advanced Micro Devices X86-64 is not currently supported.
+
+Symbol table '.dynsym' contains 6 entries:
+   Num:    Value          Size Type    Bind   Vis      Ndx Name
+     0: 0000000000000000     0 NOTYPE  LOCAL  DEFAULT  UND 
+     1: 0000000000000000     0 NOTYPE  WEAK   DEFAULT  UND _ITM_deregisterTMCloneTab
+     2: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND printf@GLIBC_2.2.5 (2)
+     3: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND __libc_start_main@GLIBC_2.2.5 (2)
+     4: 0000000000000000     0 NOTYPE  WEAK   DEFAULT  UND __gmon_start__
+     5: 0000000000000000     0 NOTYPE  WEAK   DEFAULT  UND _ITM_registerTMCloneTable
+
+Symbol table '.symtab' contains 103 entries:
+   Num:    Value          Size Type    Bind   Vis      Ndx Name
+     0: 0000000000000000     0 NOTYPE  LOCAL  DEFAULT  UND 
+     1: 0000000000400238     0 SECTION LOCAL  DEFAULT    1 
+     2: 0000000000400254     0 SECTION LOCAL  DEFAULT    2 
+     3: 0000000000400274     0 SECTION LOCAL  DEFAULT    3 
+     4: 0000000000400298     0 SECTION LOCAL  DEFAULT    4 
+     5: 00000000004002b8     0 SECTION LOCAL  DEFAULT    5 
+     6: 0000000000400348     0 SECTION LOCAL  DEFAULT    6 
+     7: 00000000004003be     0 SECTION LOCAL  DEFAULT    7 
+     8: 00000000004003d0     0 SECTION LOCAL  DEFAULT    8 
+     9: 00000000004003f0     0 SECTION LOCAL  DEFAULT    9 
+    10: 0000000000400450     0 SECTION LOCAL  DEFAULT   10 
+    11: 0000000000400468     0 SECTION LOCAL  DEFAULT   11 
+    12: 0000000000400490     0 SECTION LOCAL  DEFAULT   12 
+    13: 00000000004004b0     0 SECTION LOCAL  DEFAULT   13 
+    14: 0000000000400658     0 SECTION LOCAL  DEFAULT   14 
+    15: 0000000000400668     0 SECTION LOCAL  DEFAULT   15 
+    16: 0000000000400680     0 SECTION LOCAL  DEFAULT   16 
+    17: 00000000004006c8     0 SECTION LOCAL  DEFAULT   17 
+    18: 0000000000600e00     0 SECTION LOCAL  DEFAULT   18 
+    19: 0000000000600e08     0 SECTION LOCAL  DEFAULT   19 
+    20: 0000000000600e10     0 SECTION LOCAL  DEFAULT   20 
+    21: 0000000000600fe0     0 SECTION LOCAL  DEFAULT   21 
+    22: 0000000000601000     0 SECTION LOCAL  DEFAULT   22 
+    23: 0000000000601020     0 SECTION LOCAL  DEFAULT   23 
+    24: 0000000000601024     0 SECTION LOCAL  DEFAULT   24 
+    25: 0000000000000000     0 SECTION LOCAL  DEFAULT   25 
+    26: 0000000000a01028     0 SECTION LOCAL  DEFAULT   26 
+    27: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS /usr/lib/gcc/x86_64-redha
+    28: 00000000004004df     0 NOTYPE  LOCAL  HIDDEN    13 .annobin_init.c
+    29: 00000000004004df     0 NOTYPE  LOCAL  HIDDEN    13 .annobin_init.c_end
+    30: 00000000004004b0     0 NOTYPE  LOCAL  HIDDEN    13 .annobin_init.c.hot
+    31: 00000000004004b0     0 NOTYPE  LOCAL  HIDDEN    13 .annobin_init.c_end.hot
+    32: 00000000004004b0     0 NOTYPE  LOCAL  HIDDEN    13 .annobin_init.c.unlikely
+    33: 00000000004004b0     0 NOTYPE  LOCAL  HIDDEN    13 .annobin_init.c_end.unlik
+    34: 00000000004004b0     0 NOTYPE  LOCAL  HIDDEN    13 .annobin_init.c.startup
+    35: 00000000004004b0     0 NOTYPE  LOCAL  HIDDEN    13 .annobin_init.c_end.start
+    36: 00000000004004b0     0 NOTYPE  LOCAL  HIDDEN    13 .annobin_init.c.exit
+    37: 00000000004004b0     0 NOTYPE  LOCAL  HIDDEN    13 .annobin_init.c_end.exit
+    38: 00000000004004e0     0 NOTYPE  LOCAL  HIDDEN    13 .annobin_static_reloc.c
+    39: 00000000004004e5     0 NOTYPE  LOCAL  HIDDEN    13 .annobin_static_reloc.c_e
+    40: 00000000004004b0     0 NOTYPE  LOCAL  HIDDEN    13 .annobin_static_reloc.c.h
+    41: 00000000004004b0     0 NOTYPE  LOCAL  HIDDEN    13 .annobin_static_reloc.c_e
+    42: 00000000004004b0     0 NOTYPE  LOCAL  HIDDEN    13 .annobin_static_reloc.c.u
+    43: 00000000004004b0     0 NOTYPE  LOCAL  HIDDEN    13 .annobin_static_reloc.c_e
+    44: 00000000004004b0     0 NOTYPE  LOCAL  HIDDEN    13 .annobin_static_reloc.c.s
+    45: 00000000004004b0     0 NOTYPE  LOCAL  HIDDEN    13 .annobin_static_reloc.c_e
+    46: 00000000004004b0     0 NOTYPE  LOCAL  HIDDEN    13 .annobin_static_reloc.c.e
+    47: 00000000004004b0     0 NOTYPE  LOCAL  HIDDEN    13 .annobin_static_reloc.c_e
+    48: 00000000004004e0     0 NOTYPE  LOCAL  HIDDEN    13 .annobin__dl_relocate_sta
+    49: 00000000004004e5     0 NOTYPE  LOCAL  HIDDEN    13 .annobin__dl_relocate_sta
+    50: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS elf-init.oS
+    51: 00000000004005e0     0 NOTYPE  LOCAL  HIDDEN    13 .annobin_elf_init.c
+    52: 0000000000400655     0 NOTYPE  LOCAL  HIDDEN    13 .annobin_elf_init.c_end
+    53: 00000000004004b0     0 NOTYPE  LOCAL  HIDDEN    13 .annobin_elf_init.c.hot
+    54: 00000000004004b0     0 NOTYPE  LOCAL  HIDDEN    13 .annobin_elf_init.c_end.h
+    55: 00000000004004b0     0 NOTYPE  LOCAL  HIDDEN    13 .annobin_elf_init.c.unlik
+    56: 00000000004004b0     0 NOTYPE  LOCAL  HIDDEN    13 .annobin_elf_init.c_end.u
+    57: 00000000004004b0     0 NOTYPE  LOCAL  HIDDEN    13 .annobin_elf_init.c.start
+    58: 00000000004004b0     0 NOTYPE  LOCAL  HIDDEN    13 .annobin_elf_init.c_end.s
+    59: 00000000004004b0     0 NOTYPE  LOCAL  HIDDEN    13 .annobin_elf_init.c.exit
+    60: 00000000004004b0     0 NOTYPE  LOCAL  HIDDEN    13 .annobin_elf_init.c_end.e
+    61: 00000000004005e0     0 NOTYPE  LOCAL  HIDDEN    13 .annobin___libc_csu_init.
+    62: 0000000000400645     0 NOTYPE  LOCAL  HIDDEN    13 .annobin___libc_csu_init.
+    63: 0000000000400645     0 NOTYPE  LOCAL  HIDDEN    13 .annobin___libc_csu_fini.
+    64: 0000000000400655     0 NOTYPE  LOCAL  HIDDEN    13 .annobin___libc_csu_fini.
+    65: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS crtstuff.c
+    66: 00000000004004f0     0 FUNC    LOCAL  DEFAULT   13 deregister_tm_clones
+    67: 0000000000400520     0 FUNC    LOCAL  DEFAULT   13 register_tm_clones
+    68: 0000000000400560     0 FUNC    LOCAL  DEFAULT   13 __do_global_dtors_aux
+    69: 0000000000601024     1 OBJECT  LOCAL  DEFAULT   24 completed.7294
+    70: 0000000000600e08     0 OBJECT  LOCAL  DEFAULT   19 __do_global_dtors_aux_fin
+    71: 0000000000400590     0 FUNC    LOCAL  DEFAULT   13 frame_dummy
+    72: 0000000000600e00     0 OBJECT  LOCAL  DEFAULT   18 __frame_dummy_init_array_
+    73: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS hello.c
+    74: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS crtstuff.c
+    75: 00000000004007cc     0 OBJECT  LOCAL  DEFAULT   17 __FRAME_END__
+    76: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS 
+    77: 0000000000600e08     0 NOTYPE  LOCAL  DEFAULT   18 __init_array_end
+    78: 0000000000600e10     0 OBJECT  LOCAL  DEFAULT   20 _DYNAMIC
+    79: 0000000000600e00     0 NOTYPE  LOCAL  DEFAULT   18 __init_array_start
+    80: 0000000000400680     0 NOTYPE  LOCAL  DEFAULT   16 __GNU_EH_FRAME_HDR
+    81: 0000000000601000     0 OBJECT  LOCAL  DEFAULT   22 _GLOBAL_OFFSET_TABLE_
+    82: 0000000000400650     5 FUNC    GLOBAL DEFAULT   13 __libc_csu_fini
+    83: 0000000000000000     0 NOTYPE  WEAK   DEFAULT  UND _ITM_deregisterTMCloneTab
+    84: 0000000000601020     0 NOTYPE  WEAK   DEFAULT   23 data_start
+    85: 0000000000601024     0 NOTYPE  GLOBAL DEFAULT   23 _edata
+    86: 0000000000400658     0 FUNC    GLOBAL HIDDEN    14 _fini
+    87: 0000000000400596    20 FUNC    GLOBAL DEFAULT   13 addxy
+    88: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND printf@@GLIBC_2.2.5
+    89: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND __libc_start_main@@GLIBC_
+    90: 0000000000601020     0 NOTYPE  GLOBAL DEFAULT   23 __data_start
+    91: 0000000000000000     0 NOTYPE  WEAK   DEFAULT  UND __gmon_start__
+    92: 0000000000400670     0 OBJECT  GLOBAL HIDDEN    15 __dso_handle
+    93: 0000000000400668     4 OBJECT  GLOBAL DEFAULT   15 _IO_stdin_used
+    94: 00000000004005e0   101 FUNC    GLOBAL DEFAULT   13 __libc_csu_init
+    95: 0000000000601028     0 NOTYPE  GLOBAL DEFAULT   24 _end
+    96: 00000000004004e0     5 FUNC    GLOBAL HIDDEN    13 _dl_relocate_static_pie
+    97: 00000000004004b0    47 FUNC    GLOBAL DEFAULT   13 _start
+    98: 0000000000601024     0 NOTYPE  GLOBAL DEFAULT   24 __bss_start
+    99: 00000000004005aa    53 FUNC    GLOBAL DEFAULT   13 main
+   100: 0000000000601028     0 OBJECT  GLOBAL HIDDEN    23 __TMC_END__
+   101: 0000000000000000     0 NOTYPE  WEAK   DEFAULT  UND _ITM_registerTMCloneTable
+   102: 0000000000400468     0 FUNC    GLOBAL HIDDEN    11 _init
+
+Version symbols section '.gnu.version' contains 6 entries:
+ 地址：00000000004003be  Offset: 0x0003be  Link: 5 (.dynsym)
+  000:   0 (*本地*)       0 (*本地*)       2 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)
+  004:   0 (*本地*)       0 (*本地*)    
+
+Version needs section '.gnu.version_r' contains 1 entry:
+ 地址：0x00000000004003d0  Offset: 0x0003d0  Link: 6 (.dynstr)
+  000000: Version: 1  文件：libc.so.6  计数：1
+  0x0010:   Name: GLIBC_2.2.5  标志：无  版本：2
+
+Displaying notes found in: .note.ABI-tag
+  所有者             Data size	Description
+  GNU                  0x00000010	NT_GNU_ABI_TAG (ABI version tag)
+    OS: Linux, ABI: 3.2.0
+
+Displaying notes found in: .note.gnu.build-id
+  所有者             Data size	Description
+  GNU                  0x00000014	NT_GNU_BUILD_ID (unique build ID bitstring)
+    Build ID: 6e3dd6896a5ace19465e5a64d81da06a8a5f46c9
+
+Displaying notes found in: .gnu.build.attributes
+  所有者             Data size	Description
+  GA$<version>3h878    0x00000010	OPEN
+    Applies to region from 0x4004b0 to 0x4004b0 (.annobin_init.c.hot)
+  GA$<version>3c878    0x00000010	OPEN
+    Applies to region from 0x4004b0 to 0x4004b0 (.annobin_init.c.hot)
+  GA$<version>3s878    0x00000010	OPEN
+    Applies to region from 0x4004b0 to 0x4004b0 (.annobin_init.c.hot)
+  GA$<version>3e878    0x00000010	OPEN
+    Applies to region from 0x4004b0 to 0x4004b0 (.annobin_init.c.hot)
+  GA$<version>3h878    0x00000010	OPEN
+    Applies to region from 0x4004b0 to 0x4004b0 (.annobin_init.c.hot)
+  GA$<version>3c878    0x00000010	OPEN
+    Applies to region from 0x4004b0 to 0x4004b0 (.annobin_init.c.hot)
+  GA$<version>3s878    0x00000010	OPEN
+    Applies to region from 0x4004b0 to 0x4004b0 (.annobin_init.c.hot)
+  GA$<version>3e878    0x00000010	OPEN
+    Applies to region from 0x4004b0 to 0x4004b0 (.annobin_init.c.hot)
+  GA$<version>3a1      0x00000010	OPEN
+    Applies to region from 0x4004b0 to 0x4004df (.annobin_init.c.hot)
+  GA$<version>3a1      0x00000010	OPEN
+    Applies to region from 0x4004df to 0x4004df (.annobin_init.c)
+  GA$<version>3p878    0x00000010	OPEN
+    Applies to region from 0x4004df to 0x4004df (.annobin_init.c)
+  GA$<tool>gcc 8.3.1 2 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA*GOW:0x000000000452a 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA*<stack prot>off   0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA+stack_clash:true  0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA*cf_protection:0x008 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA*FORTIFY:0x0000000ff 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA+GLIBCXX_ASSERTION: 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA*<PIC>pie          0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA!<short enum>false 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA+omit_frame_pointe: 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA*<ABI>0xc001100000012 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA!stack_realign:fal 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA$<tool>gcc 8.3.1 2 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA*GOW:0x000000000452a 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA*<stack prot>off   0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA+stack_clash:true  0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA*cf_protection:0x008 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA*FORTIFY:0x0000000ff 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA+GLIBCXX_ASSERTION: 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA*<PIC>pie          0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA!<short enum>false 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA+omit_frame_pointe: 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA*<ABI>0xc001100000012 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA!stack_realign:fal 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA$<tool>gcc 8.3.1 2 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA*GOW:0x000000000452a 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA*<stack prot>off   0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA+stack_clash:true  0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA*cf_protection:0x008 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA*FORTIFY:0x0000000ff 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA+GLIBCXX_ASSERTION: 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA*<PIC>pie          0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA!<short enum>false 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA+omit_frame_pointe: 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA*<ABI>0xc001100000012 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA!stack_realign:fal 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA$<tool>gcc 8.3.1 2 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA*GOW:0x000000000452a 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA*<stack prot>off   0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA+stack_clash:true  0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA*cf_protection:0x008 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA*FORTIFY:0x0000000ff 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA+GLIBCXX_ASSERTION: 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA*<PIC>pie          0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA!<short enum>false 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA+omit_frame_pointe: 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA*<ABI>0xc001100000012 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA!stack_realign:fal 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA$<tool>gcc 8.3.1 2 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA*GOW:0x000000000452a 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA*<stack prot>off   0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA+stack_clash:true  0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA*cf_protection:0x008 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA*FORTIFY:0x0000000ff 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA+GLIBCXX_ASSERTION: 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA*<PIC>pie          0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA!<short enum>false 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA+omit_frame_pointe: 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA*<ABI>0xc001100000012 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA!stack_realign:fal 0x00000000	OPEN
+    Applies to region from 0x4004df
+  GA$<version>3p878    0x00000010	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5 (.annobin_static_reloc.c)
+  GA$<tool>gcc 8.3.1 2 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA*GOW:0x000000000452a 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA*<stack prot>off   0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA+stack_clash:true  0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA*cf_protection:0x008 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA*FORTIFY:0x0000000ff 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA+GLIBCXX_ASSERTION: 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA*<PIC>pie          0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA!<short enum>false 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA+omit_frame_pointe: 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA*<ABI>0xc001100000012 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA!stack_realign:fal 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA*FORTIFY:0x0000000ff 0x00000000	func
+    Applies to region from 0
+  GA+GLIBCXX_ASSERTION: 0x00000000	func
+    Applies to region from 0
+  GA$<tool>gcc 8.3.1 2 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA*GOW:0x000000000452a 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA*<stack prot>off   0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA+stack_clash:true  0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA*cf_protection:0x008 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA*FORTIFY:0x0000000ff 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA+GLIBCXX_ASSERTION: 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA*<PIC>pie          0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA!<short enum>false 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA+omit_frame_pointe: 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA*<ABI>0xc001100000012 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA!stack_realign:fal 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA$<tool>gcc 8.3.1 2 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA*GOW:0x000000000452a 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA*<stack prot>off   0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA+stack_clash:true  0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA*cf_protection:0x008 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA*FORTIFY:0x0000000ff 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA+GLIBCXX_ASSERTION: 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA*<PIC>pie          0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA!<short enum>false 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA+omit_frame_pointe: 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA*<ABI>0xc001100000012 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA!stack_realign:fal 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA$<tool>gcc 8.3.1 2 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA*GOW:0x000000000452a 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA*<stack prot>off   0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA+stack_clash:true  0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA*cf_protection:0x008 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA*FORTIFY:0x0000000ff 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA+GLIBCXX_ASSERTION: 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA*<PIC>pie          0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA!<short enum>false 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA+omit_frame_pointe: 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA*<ABI>0xc001100000012 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA!stack_realign:fal 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA$<tool>gcc 8.3.1 2 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA*GOW:0x000000000452a 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA*<stack prot>off   0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA+stack_clash:true  0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA*cf_protection:0x008 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA*FORTIFY:0x0000000ff 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA+GLIBCXX_ASSERTION: 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA*<PIC>pie          0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA!<short enum>false 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA+omit_frame_pointe: 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA*<ABI>0xc001100000012 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA!stack_realign:fal 0x00000000	OPEN
+    Applies to region from 0x4004e0 to 0x4004e5
+  GA$<version>3a1      0x00000010	OPEN
+    Applies to region from 0x4004e5 to 0x4004e5 (.annobin_static_reloc.c_end)
+  GA$<version>3a1      0x00000010	OPEN
+    Applies to region from 0x400468 to 0x40047e
+  GA$<version>3a1      0x00000010	OPEN
+    Applies to region from 0x400658 to 0x400660
+  GA$<version>3a1      0x00000010	OPEN
+    Applies to region from 0x4004f0 to 0x400596
+  GA$<version>3p878    0x00000010	OPEN
+    Applies to region from 0x4005e0 to 0x400655 (.annobin_elf_init.c)
+  GA$<tool>gcc 8.3.1 2 0x00000000	OPEN
+    Applies to region from 0x4005e0 to 0x400655
+  GA*GOW:0x000000000452a 0x00000000	OPEN
+    Applies to region from 0x4005e0 to 0x400655
+  GA*<stack prot>stron 0x00000000	OPEN
+    Applies to region from 0x4005e0 to 0x400655
+  GA+stack_clash:true  0x00000000	OPEN
+    Applies to region from 0x4005e0 to 0x400655
+  GA*cf_protection:0x008 0x00000000	OPEN
+    Applies to region from 0x4005e0 to 0x400655
+  GA*FORTIFY:0x000000002 0x00000000	OPEN
+    Applies to region from 0x4005e0 to 0x400655
+  GA+GLIBCXX_ASSERTION: 0x00000000	OPEN
+    Applies to region from 0x4005e0 to 0x400655
+  GA*<PIC>PIC          0x00000000	OPEN
+    Applies to region from 0x4005e0 to 0x400655
+  GA!<short enum>false 0x00000000	OPEN
+    Applies to region from 0x4005e0 to 0x400655
+  GA+omit_frame_pointe: 0x00000000	OPEN
+    Applies to region from 0x4005e0 to 0x400655
+  GA*<ABI>0xc001100000012 0x00000000	OPEN
+    Applies to region from 0x4005e0 to 0x400655
+  GA!stack_realign:fal 0x00000000	OPEN
+    Applies to region from 0x4005e0 to 0x400655
+  GA*FORTIFY:0x000000002 0x00000000	func
+    Applies to region from 0
+  GA+GLIBCXX_ASSERTION: 0x00000000	func
+    Applies to region from 0
+  GA*FORTIFY:0x000000002 0x00000000	func
+    Applies to region from 0
+  GA+GLIBCXX_ASSERTION: 0x00000000	func
+    Applies to region from 0
+  GA$<version>3h878    0x00000010	OPEN
+    Applies to region from 0x4004b0 to 0x4004b0 (.annobin_init.c.hot)
+  GA$<tool>gcc 8.3.1 2 0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA*GOW:0x000000000452a 0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA*<stack prot>stron 0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA+stack_clash:true  0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA*cf_protection:0x008 0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA*FORTIFY:0x000000002 0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA+GLIBCXX_ASSERTION: 0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA*<PIC>PIC          0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA!<short enum>false 0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA+omit_frame_pointe: 0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA*<ABI>0xc001100000012 0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA!stack_realign:fal 0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA$<version>3c878    0x00000010	OPEN
+    Applies to region from 0x4004b0 to 0x4004b0 (.annobin_init.c.hot)
+  GA$<tool>gcc 8.3.1 2 0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA*GOW:0x000000000452a 0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA*<stack prot>stron 0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA+stack_clash:true  0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA*cf_protection:0x008 0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA*FORTIFY:0x000000002 0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA+GLIBCXX_ASSERTION: 0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA*<PIC>PIC          0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA!<short enum>false 0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA+omit_frame_pointe: 0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA*<ABI>0xc001100000012 0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA!stack_realign:fal 0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA$<version>3s878    0x00000010	OPEN
+    Applies to region from 0x4004b0 to 0x4004b0 (.annobin_init.c.hot)
+  GA$<tool>gcc 8.3.1 2 0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA*GOW:0x000000000452a 0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA*<stack prot>stron 0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA+stack_clash:true  0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA*cf_protection:0x008 0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA*FORTIFY:0x000000002 0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA+GLIBCXX_ASSERTION: 0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA*<PIC>PIC          0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA!<short enum>false 0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA+omit_frame_pointe: 0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA*<ABI>0xc001100000012 0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA!stack_realign:fal 0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA$<version>3e878    0x00000010	OPEN
+    Applies to region from 0x4004b0 to 0x4004b0 (.annobin_init.c.hot)
+  GA$<tool>gcc 8.3.1 2 0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA*GOW:0x000000000452a 0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA*<stack prot>stron 0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA+stack_clash:true  0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA*cf_protection:0x008 0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA*FORTIFY:0x000000002 0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA+GLIBCXX_ASSERTION: 0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA*<PIC>PIC          0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA!<short enum>false 0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA+omit_frame_pointe: 0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA*<ABI>0xc001100000012 0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA!stack_realign:fal 0x00000000	OPEN
+    Applies to region from 0x4004b0
+  GA$<version>3a1      0x00000010	OPEN
+    Applies to region from 0x400655 to 0x400655 (.annobin_elf_init.c_end)
+  GA$<version>3a1      0x00000010	OPEN
+    Applies to region from 0x400655 to 0x400655 (.annobin_elf_init.c_end)
+  GA$<version>3a1      0x00000010	OPEN
+    Applies to region from 0x40047e to 0x400483
+  GA$<version>3a1      0x00000010	OPEN
+    Applies to region from 0x400660 to 0x400665
